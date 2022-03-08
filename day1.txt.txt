@@ -1,0 +1,91 @@
+Question1 = what is different between HTTP1.1 And HTTP2?
+		
+ Answer1 =   Differentiator	HTTP/1.1	HTTP/2
+             year	       1997	        2015 
+
+           Key Features:=	
+                          (HTTP 1.1):==:    It supports connection reuse i.e. for every TCP connection there could be multiple requests and responses, and pipelining                                             where the client can request several resources from the server at once. However, pipelining was hard to implement due to                                             issues such as head-of-line blocking and was not a feasible solution.
+
+                          (HTTP/2):==:      Uses multiplexing, where over a single TCP connection resources to be delivered are interleaved and arrive at                                                           the client almost at the same time. It is done using streams which can be prioritized, can have dependencies and individual                                             flow control. It also provides a feature called server push that allows the server to send data that the client will need                                             but has not yet requested.
+
+           Status Code:==::
+	
+                           (HTTP1.1):==:                 Introduces a warning header field to carry additional information about the status of a message. Can define 24                                                          status codes,error reporting is quicker and more efficient.	
+
+                           (HTTP/2):==:                  Underlying semantics of HTTP such as headers, status codes remains the same.
+
+
+            Authentication Mechanism:==:	
+
+                                (HTTP1.1):==:              It is relatively secure since it uses digest authentication, NTLM authentication.
+	
+                                (HTTP/2):==:               Security concerns from previous versions will continue to be seen in HTTP/2. However, it is better equipped                                                            to deal with them due to new TLS features like connection error of type Inadequate_Security.
+
+
+            Caching:==:
+	                         (HTTP1.1):==:             Expands on the caching support by using additional headers like cache-control, conditional headers like If-                                                             Match and by using entity tags.
+	
+                                  (HTTP/2):==:             HTTP/2 does not change much in terms of caching. With the server push feature if the client finds the                                                                   resources are already present in the cache, it can cancel the pushed stream.
+
+          Web Traffic:==:	             
+                                  (HTTP1.1):==:            HTTP/1.1 provides faster delivery of web pages and reduces web traffic as compared to HTTP/1.0. However, TCP                                                            starts slowly and with domain sharding (resources can be downloaded simultaneously by using multiple                                                            domains), connection reuse and pipelining, there is an increased risk of network congestion
+
+	                           (HTTP/2):==:            HTTP/2 utilizes multiplexing and server push to effectively reduce the page load time by a greater margin                                                            along with being less sensitive to network delays.
+
+
+
+question:2=> Write a blog about objects and its internal represtation in javascript.
+
+Answer:=>
+          Objects and its internal representation in Javascript: OBJECT=>  
+
+              
+                                         In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an                                          object, with properties. A cup has a color, a design, weight, a material it is made of, etc. The same way, JavaScript objects                                          can have properties, which define their characteristics.
+
+                                         Objects, in JavaScript, is it’s most important data-type and forms the building blocks for modern JavaScript. These objects                                            An object, is a reference data type. Variables that are assigned a reference value are given a reference or a pointer to that                                          value.That reference or pointer points to the location in memory where the object is stored. The variables don’t actually                                          store the value.single value each (depending on their types).
+
+                                         Loosely speaking, objects in JavaScript may be defined as an unordered collection of related data, of primitive or reference                                          types, in the form of “key: value” pairs. These keys can be variables or functions and are called properties and methods,                                          respectively, in the context of an object.
+
+                                         For Eg. If your object is a student, it will have properties like name, age, address, id, etc and methods like updateAddress,                                          updateNam, etc.
+
+        Creating Objects in JavaScript:
+               
+              1. By object literal:
+                    
+
+                                   The syntax of creating object using object literal is given below:
+
+                                                                                                     OBJECT = {property1:value,property2:value2....propertyN:valueN}
+
+                                                                                                     Property and value is separated by colon(:)
+
+                                                                              Example: 
+                                                                                           var person={
+                                                                                                       fname:"yyy";
+                                                                                                       iname:"zzz";
+                                                                                                        age:25;
+                                                                                                      }; 
+
+               2. By creating instance of Object directly (using new keyword):
+
+
+                          The syntax of creating object directly is given below:                                                                                
+
+                                                                             Example:
+
+                                                                                      var emp=new object();
+                                                                                       emp.id=101;
+                                                                                       emp.name="xxx";
+                                                                                       emp.salary=50000; 
+
+
+
+
+
+
+
+
+
+
+
+
